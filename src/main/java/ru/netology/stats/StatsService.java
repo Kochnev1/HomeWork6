@@ -38,6 +38,21 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
+    public int LowFindAverage(int[] sales) {
+        int findAverage =15;
+        int calculateSumSales = 25;
+        if (findAverage <= calculateSumSales) ;
+
+        return calculateSumSales(sales) / sales.length;
+    }
+    public int HightFindAverage(int[] sales) {
+        int findAverage = 15;
+        int calculateSumSales = 25;
+        if (findAverage >= calculateSumSales) ;
+
+        return calculateSumSales(sales) / sales.length;
+    }
+
 }
 
 
