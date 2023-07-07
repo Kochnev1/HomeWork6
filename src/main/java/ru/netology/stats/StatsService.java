@@ -12,5 +12,35 @@ public class StatsService {
 
         return minMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
+
+    public int calculateSumSales(int[] sales) {
+        int sum = 0;
+        for (int sale : sales) {
+            sum += sale;
+        }
+        return sum;
+
+    }
+
+    public int findAverage(int[] sales) {
+        return calculateSumSales(sales) / sales.length;
+
+    }
+
+    public int findMaxSales(int[] sales) {
+        int maxMonth = 0;
+        int month = 0;
+        for (int sale : sales) {
+            if (sale >= sales[maxMonth]) {
+                maxMonth = month;
+            }
+            month = month + 1;
+        }
+        return maxMonth + 1;
+    }
 }
+
+
+
+
 
