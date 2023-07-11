@@ -38,19 +38,29 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
-    public int LowFindAverage(int[] sales) {
-        int findAverage =15;
-        int calculateSumSales = 25;
-        if (findAverage <= calculateSumSales) ;
 
-        return calculateSumSales(sales) / sales.length;
-    }
-    public int HightFindAverage(int[] sales) {
+    public int lowFindAverage(int[] sales) {
         int findAverage = 15;
-        int calculateSumSales = 25;
-        if (findAverage >= calculateSumSales) ;
+        int calculateSumSales = 0;
+        for (int sale : sales) {
+            if (sale <= sales[findAverage]) {
+                findAverage = calculateSumSales;
+            }
+            calculateSumSales = calculateSumSales + 1;
+        }
+        return findAverage + 1;
+    }
 
-        return calculateSumSales(sales) / sales.length;
+    public int hightFindAverage(int[] sales) {
+        int findAverage = 15;
+        int calculateSumSales = 0;
+        for (int sale : sales) {
+            if (sale >= sales[findAverage]) {
+                findAverage = calculateSumSales;
+            }
+            calculateSumSales = calculateSumSales + 1;
+        }
+        return findAverage + 1;
     }
 
 }

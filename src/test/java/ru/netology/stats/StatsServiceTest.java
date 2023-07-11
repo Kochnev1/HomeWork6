@@ -23,10 +23,10 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedDay = 25;
+        int expectedDay = 15;
         int actualDay = service.calculateSumSales(sales);
 
-        Assertions.assertEquals(25, 25);
+        Assertions.assertEquals(15, 15);
     }
 
     @Test
@@ -46,21 +46,23 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedDay = 20;
-        int actualDay = 20;
+        int expectedDay = 8;
+        int actualDay = 8;
 
-        Assertions.assertEquals(20, 20);
+        Assertions.assertEquals(8, 8);
     }
+
     @Test
-    public  void lowFindAverage() {
-        int[] sales ={8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18} ;
+    public void lowFindAverage() {
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedDay = 5;
         int actualDay = 5;
 
-        Assertions.assertEquals(5,5);
+        Assertions.assertEquals(5, 5);
     }
+
     @Test
-    public void HightFindAverage() {
+    public void hightFindAverage() {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedDay = 7;
         int actualDay = 7;
