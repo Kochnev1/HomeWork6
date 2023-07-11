@@ -47,13 +47,14 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedDay = 8;
-        int actualDay = 8;
+        int actualDay = service.findMaxSales(sales);
 
         Assertions.assertEquals(8, 8);
     }
 
     @Test
     public void lowFindAverage() {
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedDay = 5;
         int actualDay = 5;
@@ -63,6 +64,7 @@ public class StatsServiceTest {
 
     @Test
     public void hightFindAverage() {
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedDay = 7;
         int actualDay = 7;
