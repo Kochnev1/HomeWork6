@@ -57,19 +57,20 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedDay = 5;
-        int actualDay = 5;
+        int actualDay = service.lowFindAverage(sales);
 
-        Assertions.assertEquals(5, 5);
+        Assertions.assertEquals(expectedDay, actualDay);
     }
 
     @Test
     public void hightFindAverage() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedDay = 7;
-        int actualDay = 7;
 
-        Assertions.assertEquals(7, 7);
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expectedDay = 5;
+        int actualDay = service.hightFindAverage(sales);
+
+        Assertions.assertEquals(expectedDay, actualDay);
     }
 }
 

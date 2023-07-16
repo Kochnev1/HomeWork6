@@ -40,27 +40,23 @@ public class StatsService {
     }
 
     public int lowFindAverage(int[] sales) {
-        int findAverage = 0;
-        int calculateSumSales = 0;
+        int counter = 0;
         for (int sale : sales) {
-            if (sale <= sales[findAverage]) {
-                findAverage = calculateSumSales;
+            if (sale < findAverage(sales)) {
+                counter++;
             }
-            calculateSumSales = calculateSumSales + 1;
         }
-        return findAverage + 1;
+        return counter;
     }
 
     public int hightFindAverage(int[] sales) {
-        int findAverage = 0;
-        int calculateSumSales = 0;
+        int counter = 0;
         for (int sale : sales) {
-            if (sale >= sales[findAverage]) {
-                findAverage = calculateSumSales;
+            if (sale > findAverage(sales)) {
+                counter++;
             }
-            calculateSumSales = calculateSumSales + 1;
         }
-        return findAverage + 1;
+        return counter;
     }
 
 }
